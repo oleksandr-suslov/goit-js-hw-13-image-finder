@@ -12,8 +12,8 @@ const refs = getRefs();
 refs.input.addEventListener('input', debounce(onSearch, 500),)
 
 function onSearch() {
-    // API.fetchImages(refs.input.value)
-        API.fetchImages('белка')
+    API.fetchImages(refs.input.value)
+        // API.fetchImages('белка')
             .then(r => {
                 // console.log(r);
                     renderPhotoCard(r)  
