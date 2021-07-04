@@ -13,7 +13,6 @@ const refs = getRefs();
 const imagesApiService = new ImageApiService();
 
 refs.gallery.addEventListener('click', onOpenModal);
-
 refs.searchInput.addEventListener('input', debounce(onSearch, 1000));
 
 function onSearch(e) {
@@ -57,12 +56,3 @@ const observer = new IntersectionObserver(onEntry, {
   rootMargin: '300px',
 });
 observer.observe(refs.scroll);
-
-
-// import * as basicLightbox from 'basiclightbox'
-
-// const instance = basicLightbox.create(`
-//     <img src="assets/images/image.png" width="800" height="600">
-// `)
-
-// instance.show()
